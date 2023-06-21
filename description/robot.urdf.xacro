@@ -1,7 +1,19 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
 
-    <!-- Example link -->
-    <link name="base_link"></link>
+   <robot name="waiter_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+        <!-- MAIN ROBOT URDF FILE -->
+        <!-- Include the components files -->
+        <xacro:include filename="$(find waiter_robot)/description/robot_properties.urdf.xacro"/>
+        
+        <xacro:include filename="$(find waiter_robot)/description/robot_base.urdf.xacro"/>
+        
+        <xacro:include filename="$(find waiter_robot)/description/circles_stacks.urdf.xacro"/>
+        <xacro:include filename="$(find waiter_robot)/description/kinect.urdf.xacro"/>
 
-</robot>
+        <!-- Intiate the components files -->
+        <xacro:robot_base/>
+        <xacro:stack_circles    parent="base_link"/>
+        <xacro:sensor_kinect parent="base_link"/>
+
+
+  </robot>
