@@ -18,6 +18,6 @@ def generate_launch_description():
 
 
 # ACML LOCALITZATION
-# ros2 launch nav2_bringup localization_launch.py map:=./my_map_save.yaml use_sim_time:=true
+# ros2 launch waiter_robot localization_launch.py use_sim_time:=true
 # set intial pose
 # set to transient local

@@ -276,3 +276,16 @@ def generate_launch_description():
 # ros2 launch nav2_bringup navigation_launch.py use_sim_time:=true
 # for acml
 # ros2 launch nav2_bringup navigation_launch.py use_sim_time:=true map_subscribe_transient_local:=true
+# [bt_navigator]: Failed to get error code: follow_path_error_code from blackboard
+
+
+  # error is kikely here 
+  #[planner_server-3] [ERROR] [1688053792.775258474] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the future.  Requested time 1688053792.475677 but the latest data is at time 941.603000, when looking up transform from frame [base_link] to frame [map]
+  #[planner_server-3] 
+  #[planner_server-3] [WARN] [1688053792.775337073] [planner_server]: GridBased plugin failed to plan from (-0.31, 0.01) to (0.51, -0.85): "Unable to transform poses to global frame"
+  #[planner_server-3] [WARN] [1688053792.775364155] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+  #[bt_navigator-5] [ERROR] [1688053792.796836859] [bt_navigator]: Failed to get error code: follow_path_error_code from blackboard
+  #[bt_navigator-5] [ERROR] [1688053792.797416655] [bt_navigator]: Goal failed
+  #[bt_navigator-5] [WARN] [1688053792.797446912] [bt_navigator]: [navigate_to_pose] [ActionServer] Aborting handle.
+
+  ######
